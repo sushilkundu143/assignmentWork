@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment </title>
+    <link rel="stylesheet" href="assets/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="has-background-light">
+    <div class="contianer">
+        <section class="section">
+            <div class="columns is-centered">
+                <div class="column is-4">
+                    <div class="card">
+                        <header class="card-header">
+                            <h4 class="card-header-title is-centered is-centered">
+                                Payment Auth Form
+                            </h4>
+                        </header>
+                        <div class="card-content">
+                            <form class="columns is-multiline" name="paymentForm" autocomplete="off" method="POST" onsubmit="submitForm()" novalidate>
+                                <div class="field column is-full">
+                                    <label class="label">Card Number</label>
+                                    <div class="control has-icons-left">
+                                        <input class="input" type="number" placeholder="Card number"  data-model="cardnumber" name="cardnumber"  autocomplete="false" valid="false">
+                                        <span class="icon is-small is-left" id="cardicon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </span>
+                                        <p class="help" id="cardnumbermessage"></p>
+                                    </div>
+                                </div>
+                                <div class="field column is-half">
+                                    <label class="label">Validity</label>
+                                    <div class="control">
+                                        <input class="input" type="date" placeholder=""  autocomplete="false" name="expirydate"  data-model="expirydate" disabled valid="false">
+                                    </div>
+                                    <p class="help" id="datemessage"></p>
+                                </div>
+                                <div class="field column is-half">
+                                    <label class="label">CCV</label>
+                                    <div class="control">
+                                        <input class="input" type="password" placeholder="" autocomplete="false" name="ccv"  data-model="ccv" disabled valid="false">
+                                    </div>
+                                    <p class="help" id="ccvmessage"></p>
+                                </div>
+                                <div class="field is-grouped m-auto">
+                                    <div class="control">
+                                        <button class="button is-link" type="submit" disabled id="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-5">
+                    <table class="table is-hoverable is-fullwidth">
+                        <thead>
+                          <tr>
+                            <th width="35%">Card Number</th>
+                            <th width="20%">Validity</th>
+                            <th width="25%">CCV</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="loaddata">
+                         
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+             <!-- <tr>
+                              <td colspan="3" rowspan="3" class="has-text-centered"> No data Avalible </td>
+                          </tr> -->
+            <!-- <div class="columns">
+                
+                <div class="results column is-3 m-auto">
+                    <h1 data-binding="cardnumber"></h1>
+                    <h2 data-binding="expirydate"></h2>
+                    <h2 data-binding="ccv"></h2>
+                  </div>
+            </div> -->
+        </section>
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
